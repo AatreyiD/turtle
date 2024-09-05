@@ -1,17 +1,17 @@
 import turtle
-bitch=turtle.Turtle()
+bit=turtle.Turtle()
 def main():
     turtle.tracer(0,0)
-    bitch.pensize(1)
-    bitch.hideturtle()
+    bit.pensize(1)
+    bit.hideturtle()
 
-    bitch.penup()                   #don't draw line to starting pos
-    bitch.setpos(-300,-300)         #start at position (x,y)
-    bitch.pendown()
+    bit.penup()                   #don't draw line to starting pos
+    bit.setpos(-300,-300)         #start at position (x,y)
+    bit.pendown()
 
-    A,B,C=Triangle(bitch,700)       #call triangle and store vertices
+    A,B,C=Triangle(bit,700)       #call triangle and store vertices
 
-    LotsOfTriangles(bitch,A,B,C,6)  #call LotsOfTriangles function
+    LotsOfTriangles(bit,A,B,C,6)  #call LotsOfTriangles function
 
     turtle.update()         #finish up
     turtle.done()
@@ -52,10 +52,10 @@ def LotsOfTriangles(T,A,B,C,layers):
     if layers<0:        #if 0 layers left, stop the code
         return
 
-    midAB,midBC,midCA=ReverseTriangle(bitch,A,B,C)      #call reverse triangle to calculate vertices
+    midAB,midBC,midCA=ReverseTriangle(bit,A,B,C)      #call reverse triangle to calculate vertices
 
-    LotsOfTriangles(bitch,  A  ,midAB,midCA,layers-1)   #call LotsOfTriangles for each of these new midpoints          #3rd set of triangles
-    LotsOfTriangles(bitch,midAB,  B  ,midBC,layers-1)
-    LotsOfTriangles(bitch,midCA,midBC,  C  ,layers-1)
+    LotsOfTriangles(bit,  A  ,midAB,midCA,layers-1)   #call LotsOfTriangles for each of these new midpoints          #3rd set of triangles
+    LotsOfTriangles(bit,midAB,  B  ,midBC,layers-1)
+    LotsOfTriangles(bit,midCA,midBC,  C  ,layers-1)
 
 main()
