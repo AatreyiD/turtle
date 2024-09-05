@@ -1,12 +1,12 @@
 import turtle
 def main():
-    bitch=turtle.Turtle()
-    bitch.pensize(10)
+    bit=turtle.Turtle()
+    bit.pensize(10)
 
     for i in range(250):                #animate
-        bitch.clear()                   #clear screen
-        ConcentricCircles(bitch)
-        bitch.left(5)                   #turn your turtle a little
+        bit.clear()                   #clear screen
+        ConcentricCircles(bit)
+        bit.left(5)                   #turn your turtle a little
         turtle.update()
 
     turtle.update()                     #show midway product
